@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRACE GENE PROPHETIC MINISTRIES - Music Artist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Use SF-like stack -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    :root {
+        --ash: #878789;
+        --ash-soft: #5a5a5b;
+        --ash-muted: #999898;
+        --dark: #050507;
+        --dark-soft: #111118;
+        --dark-elevated: #181820;
+        --accent: #e53935; /* subtle accent, not dominant */
+        --glass-bg: rgba(15, 15, 24, 0.78);
+        --glass-border: rgba(255, 255, 255, 0.06);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+        line-height: 1.5;
+        color: var(--ash);
+        background:
+            radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.02) 0, transparent 50%),
+            radial-gradient(circle at 80% 100%, rgba(255, 255, 255, 0.03) 0, transparent 55%),
+            linear-gradient(135deg, var(--dark) 0%, #080810 50%, var(--dark) 100%);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .glass {
+        background: var(--glass-bg);
+        backdrop-filter: blur(38px) saturate(160%);
+        -webkit-backdrop-filter: blur(38px) saturate(160%);
+        border-radius: 24px;
+        border: 1px solid var(--glass-border);
+        box-shadow:
+            0 18px 40px rgba(0, 0, 0, 0.65),
+            0 0 0 1px rgba(255, 255, 255, 0.03);
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 1.1rem 5%;
+        backdrop-filter: blur(32px) saturate(160%);
+        -webkit-backdrop-filter: blur(32px) saturate(160%);
+        background: rgba(5, 5, 10, 0.94);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.7rem;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        color: var(--ash);
+    }
+
+    .logo span {
+        color: var(--ash-soft);
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2.3rem;
+    }
+
+    .nav-links a {
+        color: var(--ash-muted);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.92rem;
+        letter-spacing: -0.01em;
+        transition: color 0.22s ease, transform 0.22s ease;
+        position: relative;
+    }
+
+    .nav-links a::after {
+        content: "";
+        position: absolute;
+        inset-inline: 0;
+        bottom: -6px;
+        height: 2px;
+        border-radius: 999px;
+        background: linear-gradient(to right, var(--ash-soft), transparent);
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.22s ease;
+        opacity: 0.8;
+    }
+
+    .nav-links a:hover {
+        color: var(--ash);
+        transform: translateY(-1px);
+    }
+
+    .nav-links a:hover::after {
+        transform: scaleX(1);
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+    }
+
+    .hamburger span {
+        width: 22px;
+        height: 2px;
+        background: var(--ash);
+        border-radius: 999px;
+        transition: 0.25s ease;
+    }
+
+    .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        padding: 0 5%;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: -40%;
+        background:
+            radial-gradient(circle at 10% 10%, rgba(242, 242, 245, 0.12) 0, transparent 45%),
+            radial-gradient(circle at 90% 90%, rgba(242, 242, 245, 0.08) 0, transparent 55%);
+        opacity: 0.9;
+        mix-blend-mode: screen;
+    }
+
+    .hero-content {
+        max-width: 900px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-eyebrow {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.26em;
+        color: var(--ash-muted);
+        margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.2rem, 7vw, 5.2rem);
+        font-weight: 700;
+        letter-spacing: -0.055em;
+        margin-bottom: 1.2rem;
+        color: var(--ash);
+    }
+
+    .hero h1 span {
+        color: var(--ash-soft);
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 2.6rem;
+        color: var(--ash-muted);
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-row {
+        display: flex;
+        justify-content: center;
+        gap: 1.1rem;
+        flex-wrap: wrap;
+    }
+
+    .cta-button-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        padding: 0.95rem 2.4rem;
+        background: linear-gradient(135deg, var(--ash-soft), var(--ash));
+        color: var(--dark);
+        text-decoration: none;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.98rem;
+        letter-spacing: -0.01em;
+        box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.55),
+            0 0 0 1px rgba(255, 255, 255, 0.15);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta-button-primary:hover {
+        transform: translateY(-3px);
+        box-shadow:
+            0 18px 40px rgba(0, 0, 0, 0.7),
+            0 0 0 1px rgba(255, 255, 255, 0.2);
+    }
+
+    .cta-button-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.9rem 1.8rem;
+        border-radius: 999px;
+        border: 1px solid rgba(242, 242, 245, 0.18);
+        color: var(--ash-soft);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.93rem;
+        background: rgba(10, 10, 18, 0.8);
+        transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .cta-button-secondary:hover {
+        background: rgba(18, 18, 26, 1);
+        border-color: rgba(242, 242, 245, 0.28);
+        transform: translateY(-2px);
+    }
+
+    section {
+        padding: 120px 5%;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: clamp(2.1rem, 4vw, 3.2rem);
+        font-weight: 600;
+        margin-bottom: 4.2rem;
+        letter-spacing: -0.04em;
+        color: var(--ash);
+    }
+
+    .section-subtitle {
+        text-align: center;
+        max-width: 520px;
+        margin: 0 auto 3.2rem;
+        font-size: 0.98rem;
+        color: var(--ash-muted);
+    }
+
+    .events-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        gap: 2.2rem;
+    }
+
+    .event-card {
+        padding: 2.3rem;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .event-card:hover {
+        transform: translateY(-8px);
+        box-shadow:
+            0 20px 45px rgba(0, 0, 0, 0.75),
+            0 0 0 1px rgba(255, 255, 255, 0.06);
+    }
+
+    .event-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1.1rem;
+        font-size: 0.9rem;
+        color: var(--ash-muted);
+    }
+
+    .event-date-pill {
+        padding: 0.3rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(242, 242, 245, 0.06);
+        border: 1px solid rgba(242, 242, 245, 0.14);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+    }
+
+    .event-city {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--ash-muted);
+    }
+
+    .event-card h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.8rem;
+        color: var(--ash);
+    }
+
+    .event-card p {
+        font-size: 0.95rem;
+        color: var(--ash-muted);
+    }
+
+    .booking-container {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .booking-copy h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        letter-spacing: -0.04em;
+    }
+
+    .booking-copy p {
+        font-size: 0.98rem;
+        color: var(--ash-muted);
+        margin-bottom: 1.5rem;
+    }
+
+    .booking-copy ul {
+        list-style: none;
+        color: var(--ash-muted);
+        font-size: 0.95rem;
+    }
+
+    .booking-copy li {
+        margin-bottom: 0.25rem;
+    }
+
+    .booking-form {
+        padding: 2.8rem;
+        background: linear-gradient(135deg, rgba(15, 15, 24, 0.92), rgba(10, 10, 18, 0.96));
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .form-group {
+        margin-bottom: 1.6rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 1rem 1.1rem;
+        background: rgba(8, 8, 16, 0.9);
+        border-radius: 14px;
+        border: 1px solid rgba(242, 242, 245, 0.12);
+        color: var(--ash);
+        font-size: 0.95rem;
+        font-family: inherit;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: rgba(242, 242, 245, 0.45);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: var(--ash-soft);
+        box-shadow: 0 0 0 1px rgba(242, 242, 245, 0.4);
+        background: rgba(12, 12, 20, 1);
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .about-text h3 {
+        font-size: 1.9rem;
+        margin-bottom: 1.2rem;
+        letter-spacing: -0.04em;
+    }
+
+    .about-text p {
+        font-size: 0.98rem;
+        color: var(--ash-muted);
+        margin-bottom: 1rem;
+    }
+
+    .about-text p strong {
+        color: var(--ash-soft);
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1.6rem;
+    }
+
+    .member-card {
+        padding: 1.6rem;
+        text-align: center;
+        background: rgba(10, 10, 18, 0.9);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .member-avatar {
+        width: 88px;
+        height: 88px;
+        border-radius: 28px;
+        margin: 0 auto 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:
+            radial-gradient(circle at 0 0, rgba(242, 242, 245, 0.4), transparent 55%),
+            rgba(15, 15, 24, 1);
+        color: var(--ash-soft);
+        font-size: 1.8rem;
+        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.7);
+    }
+
+    .member-card h4 {
+        font-size: 0.98rem;
+        margin-bottom: 0.3rem;
+        color: var(--ash);
+    }
+
+    .member-card p {
+        font-size: 0.86rem;
+        color: var(--ash-muted);
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+    }
+
+    .testimonial {
+        padding: 2.4rem;
+        text-align: left;
+    }
+
+    .stars {
+        color: var(--ash-soft);
+        font-size: 1.1rem;
+        letter-spacing: 0.15em;
+        margin-bottom: 1rem;
+    }
+
+    .testimonial p {
+        font-size: 0.95rem;
+        color: var(--ash-muted);
+    }
+
+    .testimonial-author {
+        margin-top: 1rem;
+        font-size: 0.92rem;
+        color: var(--ash);
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.8rem;
+        margin-bottom: 3rem;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1.6rem 1.8rem;
+    }
+
+    .contact-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(8, 8, 16, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        color: var(--ash-soft);
+    }
+
+    .contact-item h4 {
+        font-size: 0.96rem;
+        margin-bottom: 0.2rem;
+        color: var(--ash);
+    }
+
+    .contact-item p {
+        font-size: 0.9rem;
+        color: var(--ash-muted);
+    }
+
+    footer {
+        background: #050508;
+        padding: 3rem 5% 1.6rem;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.4rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .social-links a {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(12, 12, 20, 1);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        color: var(--ash-muted);
+        font-size: 1.1rem;
+        transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .social-links a:hover {
+        transform: translateY(-3px);
+        background: rgba(18, 18, 26, 1);
+        border-color: rgba(242, 242, 245, 0.3);
+        color: var(--ash);
+    }
+
+    @media (max-width: 900px) {
+        .booking-container,
+        .about-content {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hamburger {
+            display: flex;
+        }
+
+        .nav-links {
+            position: fixed;
+            top: 64px;
+            left: -100%;
+            width: 100%;
+            height: calc(100vh - 64px);
+            background: rgba(5, 5, 10, 0.98);
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 2.4rem;
+            gap: 1.8rem;
+            transition: left 0.28s ease;
+        }
+
+        .nav-links.active {
+            left: 0;
+        }
+
+        .hero {
+            text-align: center;
+        }
+
+        .hero-subtitle {
+            font-size: 1.05rem;
+        }
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #050508;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #2a2a35;
+        border-radius: 4px;
+    }
+</style>
+
+</head>
+<body>
+   <nav>
+  <div class="nav-container">
+    <div class="logo"
+         style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-family:inherit;max-width:220px;">
+     <img src="1.png"
+     alt="Grace Gene Logo"
+     style="height:60px;width:auto;display:block;object-fit:contain;border-radius:6px;">
+
+      <div style="display:flex;flex-direction:column;gap:2px;">
+        <div class="logo-main"
+             style="font-size:1.1rem;font-weight:700;letter-spacing:0.18em;color:var(--ash);text-transform:uppercase;white-space:nowrap;">
+          GRACE <span style="opacity:0.85;">GENE</span>
+        </div>
+        <div class="logo-sub"
+             style="font-size:0.6rem;text-transform:uppercase;letter-spacing:0.2em;opacity:0.7;color:var(--ash-muted);white-space:nowrap;">
+          Prophetic Ministries
+        </div>
+      </div>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#events">Mission Africa</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#booking">Booking</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimony">Testimony</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-eyebrow">Ascending Glory • 2026</div>
+            <h1>Akhil <span>Raj</span></h1>
+            <p class="hero-subtitle">
+               WHERE EARTH MEETS THE HEAVEN, GLORY`S ASCENT BEGINS</p>
+           <div class="cta-row">
+    <a href="#contact" class="cta-button-primary">
+        <i class="fas fa-calendar-plus"></i>
+        Event registration
+    </a>
+
+
+                <!-- <a href="#events" class="cta-button-secondary">
+                    <i class="fas fa-headphones"></i>
+                    Upcoming shows
+                </a> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="glass">
+        <h2 class="section-title">Upcoming events</h2>
+        <p class="section-subtitle">Hand-picked venues with curated sound, focused on intimate and high-quality listening experiences.</p>
+        <div class="events-grid">
+            <div class="event-card glass">
+                <div class="event-meta">
+                    <span class="event-date-pill">MAR 15 • 2026</span>
+                    <span class="event-city">BENGALURU</span>
+                </div>
+                <h3>Indiranagar Night Session</h3>
+                <p>Stripped-down acoustic set in a low-light, ash-and-black themed lounge. Limited capacity for a close-up performance.</p>
+            </div>
+            <div class="event-card glass">
+                <div class="event-meta">
+                    <span class="event-date-pill">APR 02 • 2026</span>
+                    <span class="event-city">MUMBAI</span>
+                </div>
+                <h3>Rooftop Listening Room</h3>
+                <p>Curated evening featuring originals and reworks. Monochrome visuals and a fully dark mode environment.</p>
+            </div>
+            <div class="event-card glass">
+                <div class="event-meta">
+                    <span class="event-date-pill">APR 20 • 2026</span>
+                    <span class="event-city">CHENNAI</span>
+                </div>
+                <h3>Studio Live Session</h3>
+                <p>Live-recorded show inside a studio setting. Audience sits in the room where the record is being made.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="glass">
+        <h2 class="section-title">Booking & sessions</h2>
+        <div class="booking-container">
+            <div class="booking-copy">
+                <h3>Live sets in ash and black.</h3>
+                <p>
+                    Designed for events that prefer a calm, minimal visual language. Perfect for brand launches, private sessions,
+                    and venues that want sound to be the focus.
+                </p>
+                <ul>
+                    <li>• Solo acoustic or full band</li>
+                    <li>• Corporate, private, and public shows</li>
+                    <li>• Studio collaboration sessions</li>
+                    <li>• Custom setlists on request</li>
+                </ul>
+            </div>
+            <form class="booking-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Event name" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Location / venue" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Performance type</option>
+                        <option value="solo">Solo acoustic</option>
+                        <option value="full-band">Full band</option>
+                        <option value="corporate">Corporate event</option>
+                        <option value="wedding">Wedding / private</option>
+                        <option value="studio">Studio session</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea rows="3" placeholder="Event details and any notes"></textarea>
+                </div>
+                <button type="submit" class="cta-button-primary" style="width:100%; justify-content:center; border-radius:14px; margin-top:0.4rem;">
+                    Send booking request
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section id="about" class="glass">
+        <h2 class="section-title">About the project</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Monochrome, but warm.</h3>
+                <p>
+                    This version of the site leans into an ash and black palette, keeping the interface minimal and letting the content breathe.
+                </p>
+                <p>
+                    Subtle glass panels, soft borders, and controlled contrast make it suitable for both desktop and mobile in low-light environments.
+                </p>
+                <p>
+                    Performance data, events, and contact details are laid out to feel like a modern system app rather than a heavy marketing page.
+                </p>
+            </div>
+            <div class="team-grid">
+                <div class="member-card">
+                    <div class="member-avatar"><i class="fas fa-microphone-alt"></i></div>
+                    <h4>GRACE GENE PROPHETIC MINISTRIES</h4>
+                    <p>Vocals • Guitar</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-avatar"><i class="fas fa-guitar"></i></div>
+                    <h4>Rahul</h4>
+                    <p>Guitars</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-avatar"><i class="fas fa-drum"></i></div>
+                    <h4>Vikram</h4>
+                    <p>Drums</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-avatar"><i class="fas fa-music"></i></div>
+                    <h4>Karthik</h4>
+                    <p>Keys • Production</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="testimony" class="glass">
+    <h2 class="section-title">What people say</h2>
+
+    <div class="testimonials-scroll"
+         style="display:flex;gap:1.5rem;overflow-x:auto;padding-bottom:0.5rem;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;">
+        <!-- Card 1 -->
+        <div class="testimonial glass"
+             style="min-width:300px;max-width:340px;flex:0 0 auto;scroll-snap-align:start;padding:1.8rem;display:flex;align-items:center;gap:1.4rem;">
+            <!-- Left: big photo -->
+            <div style="flex:0 0 90px;display:flex;justify-content:center;">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                     alt="Client photo"
+                     style="width:90px;height:90px;border-radius:50%;object-fit:cover;box-shadow:0 12px 24px rgba(0,0,0,0.6);">
+            </div>
+            <!-- Right: text -->
+            <div style="flex:1;display:flex;flex-direction:column;gap:0.4rem;">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.4rem;">
+                    <div>
+                        <div class="testimonial-author" style="font-size:0.95rem;color:var(--ash);font-weight:600;">
+                            Ananya Rao
+                        </div>
+                        <div style="font-size:0.8rem;color:var(--ash-muted);">
+                            Creative studio lead
+                        </div>
+                    </div>
+                    <div class="stars" style="color:var(--ash-soft);font-size:1rem;letter-spacing:0.12em;">
+                        ★★★★★
+                    </div>
+                </div>
+                <p style="font-size:0.9rem;color:var(--ash-muted);margin-top:0.25rem;">
+                    “The ash and black theme fit our brand perfectly. Clean, minimal, and the live set felt curated around the space.”
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial glass"
+             style="min-width:300px;max-width:340px;flex:0 0 auto;scroll-snap-align:start;padding:1.8rem;display:flex;align-items:center;gap:1.4rem;">
+            <div style="flex:0 0 90px;display:flex;justify-content:center;">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                     alt="Client photo"
+                     style="width:90px;height:90px;border-radius:50%;object-fit:cover;box-shadow:0 12px 24px rgba(0,0,0,0.6);">
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:0.4rem;">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.4rem;">
+                    <div>
+                        <div class="testimonial-author" style="font-size:0.95rem;color:var(--ash);font-weight:600;">
+                            Rahul Mehta
+                        </div>
+                        <div style="font-size:0.8rem;color:var(--ash-muted);">
+                            Product launch host
+                        </div>
+                    </div>
+                    <div class="stars" style="color:var(--ash-soft);font-size:1rem;letter-spacing:0.12em;">
+                        ★★★★★
+                    </div>
+                </div>
+                <p style="font-size:0.9rem;color:var(--ash-muted);margin-top:0.25rem;">
+                    “Professional from first call to last song. The whole experience felt like a product launch, not just a show.”
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial glass"
+             style="min-width:300px;max-width:340px;flex:0 0 auto;scroll-snap-align:start;padding:1.8rem;display:flex;align-items:center;gap:1.4rem;">
+            <div style="flex:0 0 90px;display:flex;justify-content:center;">
+                <img src="https://randomuser.me/api/portraits/men/65.jpg"
+                     alt="Client photo"
+                     style="width:90px;height:90px;border-radius:50%;object-fit:cover;box-shadow:0 12px 24px rgba(0,0,0,0.6);">
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:0.4rem;">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.4rem;">
+                    <div>
+                        <div class="testimonial-author" style="font-size:0.95rem;color:var(--ash);font-weight:600;">
+                            Daniel Joseph
+                        </div>
+                        <div style="font-size:0.8rem;color:var(--ash-muted);">
+                            Listening room owner
+                        </div>
+                    </div>
+                    <div class="stars" style="color:var(--ash-soft);font-size:1rem;letter-spacing:0.12em;">
+                        ★★★★★
+                    </div>
+                </div>
+                <p style="font-size:0.9rem;color:var(--ash-muted);margin-top:0.25rem;">
+                    “Subtle visuals, strong sound. Exactly the balance we wanted for an evening where people listen, not shout.”
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align:center;font-size:0.8rem;color:var(--ash-muted);margin-top:0.8rem;">
+        Swipe horizontally to see more stories
+    </div>
+</section>
+
+
+    <section id="contact" class="glass">
+    <h2 class="section-title">Contact & links</h2>
+
+    <!-- Contact info stays the same -->
+   
+
+    <!-- WhatsApp contact form (uses existing styles via form-group) -->
+    <form id="whatsappContactForm" style="max-width:480px;margin:2rem auto 0;">
+        <div class="form-group">
+            <input type="text" id="waName" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+            <input type="text" id="waState" placeholder="State" required>
+        </div>
+        <div class="form-group">
+            <input type="text" id="waCountry" placeholder="Country" required>
+        </div>
+        <div class="form-group">
+            <input type="tel" id="waPhone" placeholder="Contact number" required>
+        </div>
+        <button type="submit"
+                class="cta-button-primary"
+                style="width:100%;justify-content:center;border-radius:14px;margin-top:0.3rem;">
+            Contact on WhatsApp
+        </button>
+    </form>
+
+     <div class="contact-grid">
+        <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+                <h4>Phone</h4>
+                <p>+91 8606176627</p>
+            </div>
+        </div>
+        <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+                <h4>Email</h4>
+                <p>book@akhilraj.in</p>
+            </div>
+        </div>
+        <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+                <h4>Base</h4>
+                <p>Bengaluru, Karnataka</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-spotify"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-apple"></i></a>
+            <a href="#"><i class="fab fa-soundcloud"></i></a>
+        </div>
+        <p style="font-size:0.85rem; color:var(--ash-muted);">
+            © 2026 GRACE GENE PROPHETIC MINISTRIES • Ash & black live music interface
+        </p>
+    </footer>
+
+    <script>
+
+
+ // WhatsApp contact form handler
+  const waForm = document.getElementById('whatsappContactForm');
+  if (waForm) {
+    waForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('waName').value.trim();
+      const state = document.getElementById('waState').value.trim();
+      const country = document.getElementById('waCountry').value.trim();
+      const phone = document.getElementById('waPhone').value.trim();
+
+      if (!name || !state || !country || !phone) return;
+
+      const msg =
+        `New enquiry from website:%0A` +
+        `Name: ${name}%0A` +
+        `State: ${state}%0A` +
+        `Country: ${country}%0A` +
+        `Contact: ${phone}`;
+
+      const waNumber = '918606176627'; // +91 8606176627 in international format
+      const url = `https://wa.me/${waNumber}?text=${msg}`;
+
+      window.open(url, '_blank');
+    });
+  }
+
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        document.querySelector('.booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const original = btn.textContent;
+            btn.textContent = 'Request sent';
+            btn.style.opacity = '0.85';
+            setTimeout(() => {
+                btn.textContent = original;
+                btn.style.opacity = '1';
+                this.reset();
+            }, 1800);
+        });
+    </script>
+</body>
+</html>
